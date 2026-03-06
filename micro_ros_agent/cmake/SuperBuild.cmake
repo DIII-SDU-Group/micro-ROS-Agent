@@ -20,13 +20,13 @@ enable_language(C)
 enable_language(CXX)
 
 unset(xrceagent_DIR CACHE)
-find_package(xrceagent 2 EXACT QUIET)
+find_package(xrceagent 3 EXACT QUIET)
 if(NOT xrceagent_FOUND)
     ExternalProject_Add(xrceagent
             GIT_REPOSITORY
                 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
             GIT_TAG
-                ros2
+                v3.0.1
             PREFIX
                 ${PROJECT_BINARY_DIR}/agent
             INSTALL_DIR
